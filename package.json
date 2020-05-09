@@ -1,0 +1,33 @@
+{
+    "name": "basic-test",
+    "version": "1.0.0",
+    "description": "basic test of importing toolkip modules",
+    "license": "MIT",
+    "author": "Kip Price",
+    "test": "jest",
+    "main": "compiled_js/basicTest",
+    "module": "compiled_js/basicTest",
+    "types": "typings/index",
+    "scripts": {
+        "build": "npm run build:tsc && npm run build:webpack",
+        "build:webpack": "webpack",
+        "build:tsc": "tsc -p tsconfig.json --emitDeclarationOnly",
+        "test": "npx jest -- -t .test.ts"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.9.0",
+        "jest": "^24.9.0",
+        "jest-cli": "^24.9.0",
+        "ts-jest": "^24.3.0",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.5",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10",
+        "terser-webpack-plugin": "^2.3.4"
+    },
+    "dependencies": {
+        "@toolkip/create-elements": "^1.0.10",
+        "@toolkip/drawable": "^1.0.10",
+        "@toolkip/style-helpers": "1.0.10"
+    }
+}
